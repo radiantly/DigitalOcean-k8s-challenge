@@ -1,12 +1,12 @@
 # DigitalOcean's K8s challenge: Deploy a NoSql Database cluster
 
-Challenge details can be found [here](https://www.digitalocean.com/community/pages/kubernetes-challenge) - head over there to participate!
+Find the challenge details [here](https://www.digitalocean.com/community/pages/kubernetes-challenge)!
 
 ## Writeup
 
 The first thing to do is to visit the DigitalOcean dashboard and create a managed k8s cluster.
 
-![DO k8s cluster created](./misc/cluster-created.png)
+![DO k8s cluster created](misc/cluster-created.png)
 
 Once the cluster has been created, the kubeconfig file can be downloaded and used to access the cluster.
 
@@ -18,7 +18,7 @@ export KUBECONFIG=$(readlink -f awesome-mongo-k8s-do-cluster-kubeconfig.yaml)
 kubectl get nodes
 ```
 
-![Connected to cluster](./misc/cluster-connected.png)
+![Connected to cluster](misc/cluster-connected.png)
 
 For this project, I've selected MongoDB to deploy as I've worked with it on various other projects.
 
@@ -183,7 +183,7 @@ kubectl exec deployment/mongo-client -it -- /bin/bash
 mongosh --host mongo-nodeport-svc --port 27017 -u radiantly -p weakpassword
 ```
 
-![Challenge completed](./misc/finished.png)
+![Challenge completed](misc/finished.png)
 
 ## License
 
